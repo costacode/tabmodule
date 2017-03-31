@@ -32,7 +32,7 @@
     }
 
     // single tabs 
-    .tablist__item {
+    .tablist__tab {
         background-color: #eaeaea;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
@@ -46,7 +46,7 @@
     }
 
     // rule: no more than two nested classes
-    .tablist__item--active {
+    .tablist__tab--active {
         background-color: #fff;
     }            
 }
