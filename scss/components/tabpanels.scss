@@ -1,0 +1,60 @@
+// panels container
+.c_tabpanels {
+    background-color: #fff;
+    border-radius: 25px;
+    outline: 0;
+    padding: 2em 0;
+
+    @media screen and (min-width: $M) {
+        padding: 0;
+    }
+}
+
+// panels
+.tabpanel {
+    border-top: 1px solid $color-grey-1;
+    clear: both;
+    outline-style: none; 
+    overflow: hidden;
+    padding: 0 1.5em;
+
+    &:first-child {
+        border-top: 0;
+    }
+
+    @media screen and (min-width: $M) {
+        display: none;
+    }    
+}
+
+.tabpanel__active {
+    border-top: 0;
+    display: block;
+}
+
+svg { // a  better selector ???
+    .tabpanel & {
+        float: left;
+        margin-right: 1em;
+        width: 100px;
+    }
+}
+
+// specificity is contained in the module
+h2 {
+    .tabpanel & {
+        color: $color-blue-2;
+        font-size: 2em;
+        font-weight: bold;
+        margin-bottom: 0;
+    }
+}
+
+// specificity is contained in the module
+p {
+    .tabpanel & {
+        color: $color-grey-1; 
+        font-size: 1.5em;
+        margin: 0;
+    }
+}

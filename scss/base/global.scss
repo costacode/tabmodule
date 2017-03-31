@@ -1,0 +1,35 @@
+// There is an inevitable amount of global CSS we need to deal with. 
+// But we should keep it as minimal as possible.
+
+// content should dictate breakpoints
+$M: 860px;
+$L: 1024px;
+
+// colours
+$color-blue-1: #5591d4;
+$color-blue-2: #1d6ab7;
+
+$color-grey-1: #bbb;
+
+/* Box sizing approach: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+    background-color: $color-blue-1;
+    font-family: 'Open Sans', sans-serif;
+}
+
+img {
+    /* Make images behave responsively. */
+    max-width: 100%;
+    /* Make images display as a block */
+    display: block;
+}

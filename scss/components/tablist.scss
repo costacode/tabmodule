@@ -1,0 +1,36 @@
+// centering tabs and tabpanels wrapper 
+.c_tabsSwitcher {
+  margin: 2em auto;
+  width: 90%;
+}
+
+// tabs
+.m_tablist {
+    display: none;
+
+    @media screen and (min-width: $M) {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        list-style: none;
+        margin-left: 1em;
+        margin-bottom: 0;
+    }
+}
+
+// single tabs 
+.tab {
+    background-color: #eaeaea;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    color: $color-blue-2;
+    cursor: pointer;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-left: 0.1em;
+    padding: 0.2em 0.8em;
+}
+
+.tab-active {
+    background-color: #fff;
+}
