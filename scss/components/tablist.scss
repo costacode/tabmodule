@@ -1,36 +1,54 @@
+// CSS Lint - indents
+// Property orders - concetric?
+// Animation - transitions
+// avoid specificty
+// set rules - only nest mq ?
+// cs i not hard, hard is scalable, set conventions, rules, enforce
+// css variables, helped with postcss plugin
+// all colors must be variables
+
 // centering tabs and tabpanels wrapper 
-.c_tabsSwitcher {
+.tablistContainer {
   margin: 2em auto;
   width: 90%;
 }
 
 // tabs
-.m_tablist {
+.tablist {
+
+    // mobie first - block no visible
     display: none;
 
+    // on breakpoint 860px change display and add styles
+    // Check FALLBACK and see caniuae - postcss 
     @media screen and (min-width: $M) {
         display: flex;
         flex-wrap: nowrap;
+        flex-direction: row;
         justify-content: flex-start;
         list-style: none;
         margin-left: 1em;
         margin-bottom: 0;
     }
+
+    // single tabs 
+    .tablist__item {
+        background-color: #eaeaea;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        color: $color-blue-2;
+        cursor: pointer;
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-left: 0.1em;
+        padding: 0.2em 0.8em;
+
+    }
+
+    // rule: no more than two nested classes
+    .tablist__item--active {
+        background-color: #fff;
+    }            
 }
 
-// single tabs 
-.tab {
-    background-color: #eaeaea;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    color: $color-blue-2;
-    cursor: pointer;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-left: 0.1em;
-    padding: 0.2em 0.8em;
-}
 
-.tab-active {
-    background-color: #fff;
-}
