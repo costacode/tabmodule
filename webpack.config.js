@@ -9,14 +9,13 @@ const config = {
       filename: 'app.bundle.js'
   },
   // tell webpack what to do with css and what loader to use
-  // wepbpack needs loaders because it only understands js
   module: {
       rules: [
           { // for css files
               test: /\.(sass|scss)$/,
               use: ExtractTextPlugin.extract([
                   'css-loader', // translates CSS into CommonJS
-                  'postcss-loader',
+                  'postcss-loader', // for autoprefix plugin
                   'sass-loader' // compiles Sass to CSS
               ])
           }
