@@ -15,33 +15,32 @@
         <!-- tabs -->
         <!-- added new BEM classes and consistency with roles - DO WE NEED IDS?-->
         <ul role="tablist" class="tablist">
-          <li id="tab-1" role="tab" class="tablist__tab tablist__tab--active">C-3P0</li>
-          <li id="tab-2" role="tab" class="tablist__tab">Darth Vadar</li>
-          <li id="tab-3" role="tab" class="tablist__tab">BB-8</li>
-          <li id="tab-4" role="tab" class="tablist__tab">Boba Fett</li>
+          <li id="tab-1" role="tab"  aria-controls="panel-1" class="tablist__tab tablist__tab--active">C-3P0</li>
+          <li id="tab-2" role="tab"  aria-controls="panel-2" class="tablist__tab">Darth Vadar</li>
+          <li id="tab-3" role="tab"  aria-controls="panel-3" class="tablist__tab">BB-8</li>
+          <li id="tab-4" role="tab"  aria-controls="panel-4" class="tablist__tab">Boba Fett</li>
         </ul>
 
         <!-- tabpanels -->
         <!-- added BEM classes -->
         <div class="tabpanels">
-          <div class="tabpanel tabpanel--active" id="panel-1">
-
+          <div role="tabpanel" class="tabpanel tabpanel--active" id="panel-1">
             <!-- CHECK CANIUSE -->
             <svg class="tabpanel__image"><use xlink:href="#c3p0"></use></svg>
             <h2 class="tabpanel__heading">C-3P0</h2>
             <p class="tabpanel__text">2,983 ponts</p>
           </div>
-          <div class="tabpanel" id="panel-2">
+          <div role="tabpanel" class="tabpanel" id="panel-2">
             <svg class="tabpanel__image"><use xlink:href="#vadar"></use></svg>
             <h2 class="tabpanel__heading">Darth Vadar</h2>
             <p class="tabpanel__text">2,676 ponts</p>
           </div>
-          <div class="tabpanel" id="panel-3">
+          <div role="tabpanel" class="tabpanel" id="panel-3">
             <svg class="tabpanel__image"><use xlink:href="#bb8"></use></svg>
             <h2 class="tabpanel__heading">BB-8</h2>
             <p class="tabpanel__text">1,292 ponts</p>
           </div>
-          <div class="tabpanel" id="panel-4">
+          <div role="tabpanel" class="tabpanel" id="panel-4">
             <svg class="tabpanel__image"><use xlink:href="#fett"></use></svg>
             <h2 class="tabpanel__heading">Boba Fett</h2>
             <p class="tabpanel__text">872 ponts</p>
