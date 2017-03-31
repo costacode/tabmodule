@@ -40,7 +40,7 @@ img {
       list-style: none;
       margin-left: 1em;
       margin-bottom: 0; } }
-  .tablist .tablist__item {
+  .tablist .tablist__tab {
     background-color: #eaeaea;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
@@ -50,7 +50,7 @@ img {
     font-weight: bold;
     margin-left: 0.1em;
     padding: 0.2em 0.8em; }
-  .tablist .tablist__item--active {
+  .tablist .tablist__tab--active {
     background-color: #fff; }
 
 .tabpanels {
