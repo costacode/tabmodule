@@ -6,10 +6,13 @@ $M: 860px;
 $L: 1024px;
 
 // colours
+$color-white: #fff;
+
 $color-blue-1: #5591d4;
 $color-blue-2: #1d6ab7;
 
 $color-grey-1: #bbb;
+$color-grey-2: #eaeaea;
 
 /* Box sizing approach: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
 html {
@@ -32,4 +35,11 @@ img {
     max-width: 100%;
     /* Make images display as a block */
     display: block;
+}
+
+// centered block
+.module__container--centered {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 90%;
 }

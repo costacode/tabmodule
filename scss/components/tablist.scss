@@ -1,18 +1,13 @@
 // CSS Lint - indents
-// Property orders - concetric?
+// Property orders - concetric? OK
 // Animation - transitions
-// avoid specificty
-// set rules - only nest mq ?
+// avoid specificty OK
+// set rules - only nest mq ? OK
 // cs i not hard, hard is scalable, set conventions, rules, enforce
 // css variables, helped with postcss plugin
-// all colors must be variables
+// all colors must be variables OK
 
 // centering tabs and tabpanels wrapper 
-.tabmodule__container {
-  margin: 2em auto;
-  width: 90%;
-}
-
 // tabs
 .tablist {
 
@@ -33,7 +28,7 @@
 
     // single tabs 
     .tablist__tab {
-        background-color: #eaeaea;
+        background-color: $color-grey-2;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         color: $color-blue-2;
@@ -47,7 +42,7 @@
 
     // rule: no more than two nested classes
     .tablist__tab--active {
-        background-color: #fff;
+        background-color: $color-white;
     }            
 }
 

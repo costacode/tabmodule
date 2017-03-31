@@ -17,8 +17,9 @@ img {
   /* Make images display as a block */
   display: block; }
 
-.tabmodule__container {
-  margin: 2em auto;
+.module__container--centered {
+  margin: 0 auto;
+  overflow: hidden;
   width: 90%; }
 
 .tablist {
