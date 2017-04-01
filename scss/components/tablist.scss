@@ -1,13 +1,10 @@
+// check font-family
+// optimize svgs
 // CSS Lint - indents
-// Property orders - concetric? OK
 // Animation - transitions
-// avoid specificty OK
 // set rules - only nest mq ? OK
 // cs i not hard, hard is scalable, set conventions, rules, enforce
 // css variables, helped with postcss plugin
-// all colors must be variables OK
-// optimize svgs
-// check font-family
 
 
 // tabs
@@ -17,6 +14,10 @@
     display: none;
 
     // on breakpoint 860px change display and add styles
+    // Flexbox: keep an aye on potential bugs: 
+    // - http://caniuse.com/#search=flexbox
+    // - https://github.com/philipwalton/flexbugs
+    // - https://github.com/luisrudge/postcss-flexbugs-fixes
     // Check FALLBACK and see caniuae - postcss 
     @media screen and (min-width: $M) {
         display: flex;
