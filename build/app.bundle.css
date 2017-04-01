@@ -41,18 +41,20 @@ img {
       list-style: none;
       margin-left: 1em;
       margin-bottom: 0; } }
-  .tablist .tablist__tab {
-    background-color: #eaeaea;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    color: #1d6ab7;
-    cursor: pointer;
-    font-size: 1.8em;
-    font-weight: bold;
-    margin-left: 0.1em;
-    padding: 0.2em 0.8em; }
-  .tablist .tablist__tab--active {
-    background-color: #fff; }
+  .tablist__tab {
+    margin: 0 0.1em; }
+    .tablist__tab__link {
+      border-top-left-radius: 25px;
+      border-top-right-radius: 25px;
+      background-color: #eaeaea;
+      color: #1d6ab7;
+      cursor: pointer;
+      font-size: 1.8em;
+      font-weight: bold;
+      padding: 0.2em 0.8em 0;
+      text-decoration: none; }
+      .tablist__tab__link--active {
+        background-color: #fff; }
 
 .tabpanels {
   background-color: #fff;
@@ -70,20 +72,19 @@ img {
   @media screen and (min-width: 860px) {
     .tabpanel {
       display: none; } }
-  .tabpanel .tabpanel__image {
+  .tabpanel__image {
     float: left;
     margin-right: 1em;
     width: 100px; }
-  .tabpanel .tabpanel__heading {
+  .tabpanel__heading {
     color: #1d6ab7;
     font-size: 2em;
     font-weight: bold;
     margin-bottom: 0; }
-  .tabpanel .tabpanel__text {
+  .tabpanel__text {
     color: #bbb;
     font-size: 1.5em;
     margin: 0; }
-
-.tabpanel--active {
-  border-top: 0;
-  display: block; }
+  .tabpanel--active {
+    border-top: 0;
+    display: block; }

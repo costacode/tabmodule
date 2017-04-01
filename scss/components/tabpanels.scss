@@ -12,9 +12,7 @@
 
 // panels
 .tabpanel {
-    // border-top: 1px solid $color-grey-1;
     clear: both;
-    // outline-style: none; 
     overflow: hidden;
     padding: 0 1.5em;
 
@@ -22,31 +20,27 @@
         display: none;
     }    
 
-    // svg
-    .tabpanel__image { 
+    &__image { 
         float: left;
         margin-right: 1em;
         width: 100px;
     }
 
-    .tabpanel__heading {
+    &__heading {
         color: $color-blue-2;
         font-size: 2em;
         font-weight: bold;
         margin-bottom: 0;
     }
 
-    .tabpanel__text {
+    &__text {
         color: $color-grey-1; 
         font-size: 1.5em;
         margin: 0;
     }
+
+    &--active {
+        border-top: 0;
+        display: block;
+    }    
 }
-
-.tabpanel--active {
-    border-top: 0;
-    display: block;
-}
-
-
-
