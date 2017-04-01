@@ -1,5 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const WebpackNotifierPlugin = require('webpack-notifier');
+// const CompressionPlugin = require('compression-webpack-plugin');
 
 const config = {
   entry: ['./app.js', './scss/app.scss'],
@@ -25,7 +27,15 @@ const config = {
       new ExtractTextPlugin({
           filename: 'app.bundle.css',
           allChunks: true
-      })
+      }),
+      new WebpackNotifierPlugin()
+    //   new CompressionPlugin({
+    //     asset: "[path].gz[query]",
+    //     algorithm: "gzip",
+    //     test: /\.(js|css|html)$/,
+    //     threshold: 0,
+    //     minRatio: 0.0
+    //   })      
   ]
 };
 
