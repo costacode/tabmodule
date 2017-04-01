@@ -12,9 +12,14 @@
 
 // panels
 .tabpanel {
+    border-top: 1px solid $color-grey-1;
     clear: both;
     overflow: hidden;
     padding: 0 1.5em;
+
+    &:first-child {
+        border-top: 0;
+    }
 
     @media screen and (min-width: $M) {
         display: none;
