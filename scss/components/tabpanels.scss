@@ -7,6 +7,11 @@
 
     @media screen and (min-width: $M) {
         padding: 0;
+
+        .no-js & {
+            display: flex;
+            justify-content: space-around;
+        }        
     }
 }
 
@@ -23,6 +28,11 @@
 
     @media screen and (min-width: $M) {
         display: none;
+
+        .no-js & {
+            display: block;
+            padding: 2em 0;
+        }
     }    
 
     &__image { 

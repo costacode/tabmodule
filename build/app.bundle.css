@@ -54,7 +54,9 @@ img {
           padding: 0.2em 0.8em 0;
           text-decoration: none; }
           .tablist__tab__link--active {
-            background-color: #fff; } }
+            background-color: #fff; }
+      .no-js .tablist {
+        display: none; } }
 
 .tabpanels {
   background-color: #fff;
@@ -63,7 +65,13 @@ img {
   padding: 2em 0; }
   @media screen and (min-width: 860px) {
     .tabpanels {
-      padding: 0; } }
+      padding: 0; }
+      .no-js .tabpanels {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; } }
 
 .tabpanel {
   border-top: 1px solid #bbb;
@@ -74,7 +82,10 @@ img {
     border-top: 0; }
   @media screen and (min-width: 860px) {
     .tabpanel {
-      display: none; } }
+      display: none; }
+      .no-js .tabpanel {
+        display: block;
+        padding: 2em 0; } }
   .tabpanel__image {
     float: left;
     margin-right: 1em;
