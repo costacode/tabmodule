@@ -1,32 +1,31 @@
-// Using vanilla js
-
 module.export = ( function (){
 
-    function updatePanels(e, navigation, content) {
-        var queryVal = 'div' + e.target.hash;
+    // store nodes - querySelector returns the first matching element
+    var tabList = document.querySelector('.tablist');
+    var tabPanels = document.querySelector('.tabpanels');
+
+    // function to update panels with parameters
+    function updateTabs(e, navtab, content) {
+        // use hash property to call anchor targets
+        var anchorVal = 'div' + e.target.hash;
         e.preventDefault();
 
-        navigation.querySelector('a.tablist__tab__link--active').classList.remove('tablist__tab__link--active');
+        // update active class on clicked tabs, classList is supported on IE10+
+        // classList API: https://www.sitepoint.com/exploring-classlist-api/ 
+        navtab.querySelector('a.tablist__tab__link--active').classList.remove('tablist__tab__link--active');
         e.target.classList.add('tablist__tab__link--active');
 
-        console.log(queryVal);
-
+        // update panel content
         content.querySelector('div.tabpanel--active').classList.remove('tabpanel--active');
-        content.querySelector(queryVal).classList.add('tabpanel--active');
-
-        return queryVal;
+        content.querySelector(anchorVal).classList.add('tabpanel--active');
     }
 
-    // store nodes
-    var moduleContainer = document.getElementsByClassName('module__container--centered')[0];
-    var tabList = moduleContainer.querySelector('.tablist');
-    var tabPanels = tabList.nextElementSibling; 
-
+    // so, what we want: if event.target is anchor tag show new panel    
     tabList.addEventListener('click', function(event) {
-        // if click on a tab
-        if (event.target.tagName.toLowerCase() === 'a') {
-            // change tabpanels
-            var functionVar = updatePanels(event, tabList, tabPanels);
+
+        if ( event.target.tagName.toLowerCase() === 'a' ) {
+            // update panels - call the function adding values to parameters
+            updateTabs(event, tabList, tabPanels);
         }
-    }); 
+    }, false); 
 } )();
