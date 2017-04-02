@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Firefly front-end coding test primer</title>
-
-        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
         
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <style>body {font-family: 'Open Sans', sans-serif;}</style>
         <link rel="stylesheet" href="build/app.bundle.css">
+
+         <!--Replace no-js with js on html elemenet when js is enabled-->
+        <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+
     </head>
     <body>
 
@@ -156,6 +157,18 @@
           </g>
         </symbol>
       </svg>
+
+      <!--
+        Worth to check loading google fonts with the Web Font Loader co-developed by Google and Typekit https://github.com/typekit/webfontloader#google
+        -->
+      <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+      <script>
+        WebFont.load({
+          google: {
+            families: ['Open Sans']
+          }
+        });
+      </script>
 
       <script src="build/app.bundle.js"></script>
 
