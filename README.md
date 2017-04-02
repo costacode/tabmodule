@@ -32,6 +32,11 @@ Use CSS animation for panels
 
 Set rules for indenting
 
+Set local Open Sans font as fallback
+- https://www.keycdn.com/blog/web-font-performance/
+
+----------------------------------
+
 ### Time
 
 This test should take you around two hours.
