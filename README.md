@@ -10,7 +10,7 @@ We've provided a design and HTML for an example component that we'd like you to 
 **To start this test, you'll need to clone or [download the zip](https://github.com/fireflylearning/front-end-coding-test-css/archive/master.zip) of this repository**. 
 
 
-### Sergio notes - things worth to explore
+### Sergio notes - things worth to explore or to-dos
 
 CSS Lint
 - stylelint PostCSS plugin - https://stylelint.io/user-guide/postcss-plugin/ 
@@ -22,15 +22,8 @@ CSS variables / CSS Modules
 - https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care
 - Lea Verou slides: https://leaverou.github.io/css-variables/#for-browser
 
-Serve gz assets
-- Webpack ?
-- htaccess ?
-
-Read all about painting
-
-Use CSS animation for panels
-
-Set rules for indenting
+Serve gzipped assets
+- Webpack or htaccess
 
 Set local Open Sans font as fallback
 - https://www.keycdn.com/blog/web-font-performance/
