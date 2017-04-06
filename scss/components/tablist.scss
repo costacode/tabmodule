@@ -11,6 +11,7 @@
     // - https://github.com/luisrudge/postcss-flexbugs-fixes
     // Check FALLBACK and see caniuae - postcss 
     @media screen and (min-width: $M) {
+        display: table; // KEY ADD: fallback
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
@@ -21,7 +22,11 @@
 
         // single tabs 
         &__tab {
-            margin: 0 0.1em;
+            // KEY ADD : In IE10 the default value for flex is 0 0 auto rather than 0 1 auto as defined in the latest spec.
+            display: table-cell; // KEY ADD: fallback
+            display: flex;
+            flex:  0 1 auto;
+            margin: 0 0.1em;           
 
             &__link {
                 border-top-left-radius: 25px;

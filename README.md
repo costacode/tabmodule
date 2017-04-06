@@ -28,6 +28,18 @@ Serve gzipped assets
 Set local Open Sans font as fallback
 - https://www.keycdn.com/blog/web-font-performance/
 
+KEY ADDITIONS 'POST_LAUNCH'
+Best practices:
+- Devs should test their code on actual devices (Browsersync, etc)
+- Peer review (code review) is essential
+- QA test is key
+
+Key bug fixes:
+- Add viewport to the markup
+- In IE10 the default value for flex on children elements is 0 0 auto rather than 0 1 auto as defined in the latest spec, so add: flex: 0 1 auto; to tablist__tab property.
+- Add display: table (parent) & display: table-cell (children) as fallback for older browsers.
+
+
 ----------------------------------
 
 ### Time
